@@ -30,10 +30,10 @@ export function Dashboard(){
       <Header>
         <UserContainer>
           <UserInfo>
-            <Photo source={{uri:"https://github.com/fabioabrantes.png"}} />
+            <Photo source={require("../../../assets/images/perfil.jpeg")} />
             <User>
               <UserGreeting>Olá</UserGreeting>
-              <UserName>Fabio</UserName>
+              <UserName>Kauê</UserName>
             </User>
           </UserInfo>
           
@@ -49,21 +49,21 @@ export function Dashboard(){
         <ResumeCard 
           type="up"
           title="Entradas" 
-          amount="R$ 17.400,00"
+          amount="R$ 17.000,00"
           lastTransaction="Última entrada dia 13 de abril"
           nameIcon='arrow-up-circle'
         />
         <ResumeCard 
           type="down"
           title="Saidas" 
-          amount="R$ 12.259,00"
+          amount="R$ 1.500,00"
           lastTransaction="Última saída dia 03 de abril"
           nameIcon='arrow-down-circle'
         />
         <ResumeCard 
           type="total"
           title="Total" 
-          amount="R$ 16.141,00"
+          amount="R$ 15.500,00"
           lastTransaction="01 à 16 de abril"
           nameIcon ="dollar-sign"
         />
