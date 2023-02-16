@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, ActivityIndicator} from 'react-native';
-import {ThemeProvider} from 'styled-components/native';
+import { ThemeProvider } from 'styled-components/native';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   Poppins_400Regular,
   Poppins_700Bold,
@@ -10,9 +10,9 @@ import {
 
 import theme from './src/global/styles/theme';
 
-import {Dashboard} from './src/screens/Dashboard';
+import { Loading } from './src/components/Loading';
 
-import {Loading} from './src/components/Loading';
+import AuthNavigator from './src/navegations/authNavigator';
 
 export default function App() {
 
@@ -24,17 +24,20 @@ export default function App() {
 
   if(!fontsLoaded){
     return (
-      <ThemeProvider theme={theme}>
-        <Loading />
-      </ThemeProvider>
+      <NavigationContainer>
+        <ThemeProvider theme={theme}>
+          <Loading />
+        </ThemeProvider>
+      </NavigationContainer>
     );
     
   }
 
   return (
+    <NavigationContainer>
     <ThemeProvider theme={theme}>
-      <Dashboard />
+      <AuthNavigator />
     </ThemeProvider>
+  </NavigationContainer>
   );
 }
-
